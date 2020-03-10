@@ -36,6 +36,13 @@ namespace RtmpFormsClient.Droid
 			holder.AddCallback(this);
 		}
 
+		protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
+		{
+			int width = ResolveSize(SuggestedMinimumWidth, widthMeasureSpec);
+			int height = ResolveSize(SuggestedMinimumHeight, heightMeasureSpec);
+			SetMeasuredDimension(width, height);
+		}
+
 		protected override void OnLayout(bool changed, int l, int t, int r, int b)
 		{
 			var msw = MeasureSpec.MakeMeasureSpec(r - l, MeasureSpecMode.Exactly);
