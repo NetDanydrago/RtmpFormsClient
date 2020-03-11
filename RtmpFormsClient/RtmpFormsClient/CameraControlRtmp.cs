@@ -22,11 +22,11 @@ namespace RtmpFormsClient
         public static BindableProperty BitrateProperty =
         BindableProperty.Create(nameof(Bitrate), typeof(int), typeof(int));
         public static BindableProperty WidthStreamProperty =
-        BindableProperty.Create(nameof(WidthStream), typeof(int), typeof(int));
+        BindableProperty.Create(nameof(StreamWidth), typeof(int), typeof(int));
         public static BindableProperty HeightStreamProperty =
-        BindableProperty.Create(nameof(HeightStream), typeof(int), typeof(int));
+        BindableProperty.Create(nameof(StreamHeight), typeof(int), typeof(int));
         public static BindableProperty IsAzureProperty =
-            BindableProperty.Create(nameof(isAzure), typeof(bool), typeof(bool));
+            BindableProperty.Create(nameof(IsAzure), typeof(bool), typeof(bool));
 
         #region Properties
         public string UrlText
@@ -39,18 +39,18 @@ namespace RtmpFormsClient
             get => (int)GetValue(BitrateProperty);
             set => SetValue(BitrateProperty, value);
         }
-        public int WidthStream
+        public int StreamWidth
         {
             get => (int)GetValue(WidthStreamProperty);
             set => SetValue(WidthStreamProperty, value);
         }
 
-        public int HeightStream
+        public int StreamHeight
         {
             get => (int)GetValue(HeightStreamProperty);
             set => SetValue(HeightStreamProperty,value);
         }
-        public bool isAzure
+        public bool IsAzure
         {
             get => (bool)GetValue(IsAzureProperty);
             set => SetValue(IsAzureProperty, value);

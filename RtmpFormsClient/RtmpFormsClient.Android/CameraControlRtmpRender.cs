@@ -53,13 +53,13 @@ namespace RtmpFormsClient.Droid
         {
             var stream = sender as RtmpFormsClient.CameraControlRtmp;
             string Url = stream.UrlText;
-            if(stream.isAzure)
+            if(stream.IsAzure)
             {
                 Url = $"{stream.UrlText}/Default";
             }
-            if (stream.HeightStream != 0 && stream.WidthStream != 0 && stream.Bitrate != 0)
+            if (stream.StreamHeight != 0 && stream.StreamWidth != 0 && stream.Bitrate != 0)
             {
-                CameraSurfaceView.StarStreaming(Url, stream.WidthStream, stream.HeightStream, stream.Bitrate);
+                CameraSurfaceView.StarStreaming(Url, stream.StreamWidth, stream.StreamHeight, stream.Bitrate);
             }
             else
             {

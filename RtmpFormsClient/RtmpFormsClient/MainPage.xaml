@@ -11,7 +11,7 @@
         <!-- Place new controls here -->
 <Entry x:Name="URL"  Text="rtmp://dotnetpuebla.com:1935/TestSingle/Dan"></Entry>
         <Label Text="Welcome to Xamarin.Forms!" Padding="100"/>
-        <local:CameraControlRtmp x:Name="Dan"  HeightRequest="300" WidthRequest="300"  Bitrate="1200" HeightStream="480" WidthStream="640"  ></local:CameraControlRtmp>
+        <local:CameraControlRtmp x:Name="Dan"  HeightRequest="300" WidthRequest="300"  Bitrate="1200" StreamHeight="480" StreamWidth="640"  ></local:CameraControlRtmp>
         <Button x:Name="Button" Text="StarStream"></Button>
         <Button x:Name="ButtonStop" Text="StopStream"></Button>
     </StackLayout>

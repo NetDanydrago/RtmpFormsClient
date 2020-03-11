@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>RtmpFormNugetPackage</id>
+    <version>1.0.5</version>
+    <authors>Destiny</authors>
+    <owners>Destiny</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <description>Custom control for streaming in Android</description>
+    <copyright>Copyright 2020</copyright>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+      </group>
+      <group targetFramework="MonoAndroid">
+      </group>
+    </dependencies>
+  </metadata>
+    <files>
+        <!-- Cross-platform reference assemblies -->
+        <file src="RtmpFormsClient\RtmpFormsClient\bin\Release\netstandard2.0\RtmpFormsClient.dll" target="lib\netstandard2.0" />
+	<!-- Android reference assemblies -->
+	<file src="RtmpFormsClient\RtmpFormsClient.Android\bin\Release\RtmpFormsClient.Android.dll" target="lib\MonoAndroid" />
+        <file src="RtmpFormsClient\RtmpFormsClient.Android\bin\Release\RtmpAndroidClient.dll" target="lib\MonoAndroid" />
+	<file src="RtmpFormsClient\RtmpFormsClient.Android\bin\Release\RtmpFormsClient.dll" target="lib\MonoAndroid" />
+    </files>
+</package>
