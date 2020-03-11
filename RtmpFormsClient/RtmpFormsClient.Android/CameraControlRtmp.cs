@@ -36,12 +36,6 @@ namespace RtmpFormsClient.Droid
 			holder.AddCallback(this);
 		}
 
-		protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
-		{
-			int width = ResolveSize(SuggestedMinimumWidth, widthMeasureSpec);
-			int height = ResolveSize(SuggestedMinimumHeight, heightMeasureSpec);
-			SetMeasuredDimension(width, height);
-		}
 
 		protected override void OnLayout(bool changed, int l, int t, int r, int b)
 		{
@@ -86,10 +80,10 @@ namespace RtmpFormsClient.Droid
 			}
 		}
 
-		public void StartStreaming(string Url,int width,int height,int bitrate)
+		public void StarStreaming(string Url,int width,int height,int bitrate)
 		{
 			// Hay audio y video?
-			if (RtmpCamera2.PrepareAudio() && RtmpCamera2.PrepareVideo(width,height,30,(bitrate*1200),false, CameraHelper.GetCameraOrientation(Context)))
+			if (RtmpCamera2.PrepareAudio() && RtmpCamera2.PrepareVideo(width,height,30,(bitrate*1024),true, CameraHelper.GetCameraOrientation(Context)))
 			{
 
 				RtmpCamera2.StartStream(Url);

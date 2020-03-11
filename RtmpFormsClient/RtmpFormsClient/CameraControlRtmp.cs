@@ -25,6 +25,8 @@ namespace RtmpFormsClient
         BindableProperty.Create(nameof(WidthStream), typeof(int), typeof(int));
         public static BindableProperty HeightStreamProperty =
         BindableProperty.Create(nameof(HeightStream), typeof(int), typeof(int));
+        public static BindableProperty IsAzureProperty =
+            BindableProperty.Create(nameof(isAzure), typeof(bool), typeof(bool));
 
         #region Properties
         public string UrlText
@@ -47,6 +49,11 @@ namespace RtmpFormsClient
         {
             get => (int)GetValue(HeightStreamProperty);
             set => SetValue(HeightStreamProperty,value);
+        }
+        public bool isAzure
+        {
+            get => (bool)GetValue(IsAzureProperty);
+            set => SetValue(IsAzureProperty, value);
         }
         #endregion
 
@@ -93,16 +100,6 @@ namespace RtmpFormsClient
         #endregion
 
         #region Events
-        public void ConnectionFailedRtmp(string message)
-        {
-            var Handler = OnConectionFailStream;
-            Handler?.Invoke(this, EventArgs.Empty);
-        }
-        public void NewBitrateRtmp(long bitrate)
-        {
-            var Handler = OnNewBitrateStream;
-            Handler?.Invoke(this, EventArgs.Empty);
-        }
         public event EventHandler OnStartStream;
         public event EventHandler OnStopStream;
 
