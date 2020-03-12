@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>RtmpFormNugetPackage</id>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <authors>Destiny</authors>
     <owners>Destiny</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -18,7 +18,7 @@ namespace RtmpFormsClient
             InitializeComponent();
             Button.Clicked += (sender, e) =>
             {
-                Dan.UrlText = URL.Text;
+                Dan.Url = URL.Text;
                 Dan.StarStream();
             };
             ButtonStop.Clicked += (sender, e) =>

@@ -18,7 +18,7 @@ namespace RtmpFormsClient
     public class CameraControlRtmp : View
     {
         public static BindableProperty UrlTextProperty =
-        BindableProperty.Create(nameof(UrlText), typeof(string), typeof(string));
+        BindableProperty.Create(nameof(Url), typeof(string), typeof(string));
         public static BindableProperty BitrateProperty =
         BindableProperty.Create(nameof(Bitrate), typeof(int), typeof(int));
         public static BindableProperty WidthStreamProperty =
@@ -29,7 +29,7 @@ namespace RtmpFormsClient
             BindableProperty.Create(nameof(IsAzure), typeof(bool), typeof(bool));
 
         #region Properties
-        public string UrlText
+        public string Url
         {
             get => (string)GetValue(UrlTextProperty);
             set => SetValue(UrlTextProperty, value);
